@@ -109,6 +109,25 @@ body {
   margin-top: -15px;
   border: 1px solid #777;
 }
+.range .field input::-moz-range-track {
+  width: 240px;
+  height: 2px;
+}
+.range .field input::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  background: #664aff;
+  border-radius: 50%;
+  border: 1px solid #777;
+  position: relative;
+  cursor: pointer;
+}
+.range .field input::-moz-range-progress {
+  height: 2px;
+  background: #e33d44;
+  border: 0;
+  margin-top: 0;
+}
 
 .range .field input::-webkit-slider-thumb {
   -webkit-appearance: none;
