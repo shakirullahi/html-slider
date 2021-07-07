@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="range">
+      <div class="sliderValue">
+        <span>100</span>
+      </div>
+      <div class="field">
+        <div class="value left">0</div>
+        <input
+          type="range"
+          name="slider"
+          min="0"
+          max="200"
+          step="10"
+          value="100"
+        />
+        <div class="value right">100</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const sliderValue = document.querySelector("span");
+    const sliderInput = document.querySelector("input");
+    sliderInput.oninput = () => {
+      let value = sliderInput.value;
+      sliderValue.textContent = value;
+      sliderValue.style.left = value / 2 + "%";
+    };
+  </script>
+</html>

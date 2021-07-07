@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  text-align: center;
+  place-items: center;
+  background-color: teal;
+}
+
+.range {
+  height: 80px;
+  width: 380px;
+  background: #fafafa;
+  border-radius: 20px;
+  padding: 0 65px 0 45px;
+}
+
+.range .sliderValue {
+  position: relative;
+  width: 100%;
+}
+
+.range .sliderValue span {
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  color: #fff;
+  top: -40px;
+  transform: translateX(-50%);
+  line-height: 55px;
+  z-index: 2;
+}
+
+.range .sliderValue span::after {
+  position: absolute;
+  content: "";
+  height: 45px;
+  width: 45px;
+  background: #664aff;
+  border: 3px solid #fff;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -1;
+}
+
+.range .field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.range .field .value {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 600;
+  color: #664aff;
+}
+
+.range .field .value.left {
+  left: -22px;
+}
+
+.range .field .value.right {
+  right: -43px;
+}
+
+.range .field input {
+  -webkit-appearance: none;
+  min-height: 50px;
+  width: 100%;
+  background: none;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  overflow: hidden;
+}
+.range .field input:focus {
+  box-shadow: none;
+  outline: none;
+}
+.range .field input::-webkit-slider-runnable-track {
+  background: #e33d44;
+  content: "";
+  height: 2px;
+  pointer-events: none;
+}
+.range .field input::-webkit-slider-thumb {
+  width: 38px;
+  height: 18px;
+  appearance: none;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 5px 0 0 0px #fafafa, 6px 0 0 0px #fafafa, 7px 0 0 0px #fafafa, 8px 0 0 0px #fafafa, 9px 0 0 0px #fafafa, 10px 0 0 0px #fafafa, 11px 0 0 0px #fafafa, 12px 0 0 0px #fafafa, 13px 0 0 0px #fafafa, 14px 0 0 0px #fafafa, 15px 0 0 0px #fafafa, 16px 0 0 0px #fafafa, 17px 0 0 0px #fafafa, 18px 0 0 0px #fafafa, 19px 0 0 0px #fafafa, 20px 0 0 0px #fafafa, 21px 0 0 0px #fafafa, 22px 0 0 0px #fafafa, 23px 0 0 0px #fafafa, 24px 0 0 0px #fafafa, 25px 0 0 0px #fafafa, 26px 0 0 0px #fafafa, 27px 0 0 0px #fafafa, 28px 0 0 0px #fafafa, 29px 0 0 0px #fafafa, 30px 0 0 0px #fafafa, 31px 0 0 0px #fafafa, 32px 0 0 0px #fafafa, 33px 0 0 0px #fafafa, 34px 0 0 0px #fafafa, 35px 0 0 0px #fafafa, 36px 0 0 0px #fafafa, 37px 0 0 0px #fafafa, 38px 0 0 0px #fafafa, 39px 0 0 0px #fafafa, 40px 0 0 0px #fafafa, 41px 0 0 0px #fafafa, 42px 0 0 0px #fafafa, 43px 0 0 0px #fafafa, 44px 0 0 0px #fafafa, 45px 0 0 0px #fafafa, 46px 0 0 0px #fafafa, 47px 0 0 0px #fafafa, 48px 0 0 0px #fafafa, 49px 0 0 0px #fafafa, 50px 0 0 0px #fafafa, 51px 0 0 0px #fafafa, 52px 0 0 0px #fafafa, 53px 0 0 0px #fafafa, 54px 0 0 0px #fafafa, 55px 0 0 0px #fafafa, 56px 0 0 0px #fafafa, 57px 0 0 0px #fafafa, 58px 0 0 0px #fafafa, 59px 0 0 0px #fafafa, 60px 0 0 0px #fafafa, 61px 0 0 0px #fafafa, 62px 0 0 0px #fafafa, 63px 0 0 0px #fafafa, 64px 0 0 0px #fafafa, 65px 0 0 0px #fafafa, 66px 0 0 0px #fafafa, 67px 0 0 0px #fafafa, 68px 0 0 0px #fafafa, 69px 0 0 0px #fafafa, 70px 0 0 0px #fafafa, 71px 0 0 0px #fafafa, 72px 0 0 0px #fafafa, 73px 0 0 0px #fafafa, 74px 0 0 0px #fafafa, 75px 0 0 0px #fafafa, 76px 0 0 0px #fafafa, 77px 0 0 0px #fafafa, 78px 0 0 0px #fafafa, 79px 0 0 0px #fafafa, 80px 0 0 0px #fafafa, 81px 0 0 0px #fafafa, 82px 0 0 0px #fafafa, 83px 0 0 0px #fafafa, 84px 0 0 0px #fafafa, 85px 0 0 0px #fafafa, 86px 0 0 0px #fafafa, 87px 0 0 0px #fafafa, 88px 0 0 0px #fafafa, 89px 0 0 0px #fafafa, 90px 0 0 0px #fafafa, 91px 0 0 0px #fafafa, 92px 0 0 0px #fafafa, 93px 0 0 0px #fafafa, 94px 0 0 0px #fafafa, 95px 0 0 0px #fafafa, 96px 0 0 0px #fafafa, 97px 0 0 0px #fafafa, 98px 0 0 0px #fafafa, 99px 0 0 0px #fafafa, 100px 0 0 0px #fafafa, 101px 0 0 0px #fafafa, 102px 0 0 0px #fafafa, 103px 0 0 0px #fafafa, 104px 0 0 0px #fafafa, 105px 0 0 0px #fafafa, 106px 0 0 0px #fafafa, 107px 0 0 0px #fafafa, 108px 0 0 0px #fafafa, 109px 0 0 0px #fafafa, 110px 0 0 0px #fafafa, 111px 0 0 0px #fafafa, 112px 0 0 0px #fafafa, 113px 0 0 0px #fafafa, 114px 0 0 0px #fafafa, 115px 0 0 0px #fafafa, 116px 0 0 0px #fafafa, 117px 0 0 0px #fafafa, 118px 0 0 0px #fafafa, 119px 0 0 0px #fafafa, 120px 0 0 0px #fafafa, 121px 0 0 0px #fafafa, 122px 0 0 0px #fafafa, 123px 0 0 0px #fafafa, 124px 0 0 0px #fafafa, 125px 0 0 0px #fafafa, 126px 0 0 0px #fafafa, 127px 0 0 0px #fafafa, 128px 0 0 0px #fafafa, 129px 0 0 0px #fafafa, 130px 0 0 0px #fafafa, 131px 0 0 0px #fafafa, 132px 0 0 0px #fafafa, 133px 0 0 0px #fafafa, 134px 0 0 0px #fafafa, 135px 0 0 0px #fafafa, 136px 0 0 0px #fafafa, 137px 0 0 0px #fafafa, 138px 0 0 0px #fafafa, 139px 0 0 0px #fafafa, 140px 0 0 0px #fafafa, 141px 0 0 0px #fafafa, 142px 0 0 0px #fafafa, 143px 0 0 0px #fafafa, 144px 0 0 0px #fafafa, 145px 0 0 0px #fafafa, 146px 0 0 0px #fafafa, 147px 0 0 0px #fafafa, 148px 0 0 0px #fafafa, 149px 0 0 0px #fafafa, 150px 0 0 0px #fafafa, 151px 0 0 0px #fafafa, 152px 0 0 0px #fafafa, 153px 0 0 0px #fafafa, 154px 0 0 0px #fafafa, 155px 0 0 0px #fafafa, 156px 0 0 0px #fafafa, 157px 0 0 0px #fafafa, 158px 0 0 0px #fafafa, 159px 0 0 0px #fafafa, 160px 0 0 0px #fafafa, 161px 0 0 0px #fafafa, 162px 0 0 0px #fafafa, 163px 0 0 0px #fafafa, 164px 0 0 0px #fafafa, 165px 0 0 0px #fafafa, 166px 0 0 0px #fafafa, 167px 0 0 0px #fafafa, 168px 0 0 0px #fafafa, 169px 0 0 0px #fafafa, 170px 0 0 0px #fafafa, 171px 0 0 0px #fafafa, 172px 0 0 0px #fafafa, 173px 0 0 0px #fafafa, 174px 0 0 0px #fafafa, 175px 0 0 0px #fafafa, 176px 0 0 0px #fafafa, 177px 0 0 0px #fafafa, 178px 0 0 0px #fafafa, 179px 0 0 0px #fafafa, 180px 0 0 0px #fafafa, 181px 0 0 0px #fafafa, 182px 0 0 0px #fafafa, 183px 0 0 0px #fafafa, 184px 0 0 0px #fafafa, 185px 0 0 0px #fafafa, 186px 0 0 0px #fafafa, 187px 0 0 0px #fafafa, 188px 0 0 0px #fafafa, 189px 0 0 0px #fafafa, 190px 0 0 0px #fafafa, 191px 0 0 0px #fafafa, 192px 0 0 0px #fafafa, 193px 0 0 0px #fafafa, 194px 0 0 0px #fafafa, 195px 0 0 0px #fafafa, 196px 0 0 0px #fafafa, 197px 0 0 0px #fafafa, 198px 0 0 0px #fafafa, 199px 0 0 0px #fafafa, 200px 0 0 0px #fafafa, 201px 0 0 0px #fafafa, 202px 0 0 0px #fafafa, 203px 0 0 0px #fafafa, 204px 0 0 0px #fafafa, 205px 0 0 0px #fafafa, 206px 0 0 0px #fafafa, 207px 0 0 0px #fafafa, 208px 0 0 0px #fafafa, 209px 0 0 0px #fafafa, 210px 0 0 0px #fafafa, 211px 0 0 0px #fafafa, 212px 0 0 0px #fafafa, 213px 0 0 0px #fafafa, 214px 0 0 0px #fafafa, 215px 0 0 0px #fafafa, 216px 0 0 0px #fafafa, 217px 0 0 0px #fafafa, 218px 0 0 0px #fafafa, 219px 0 0 0px #fafafa, 220px 0 0 0px #fafafa, 221px 0 0 0px #fafafa, 222px 0 0 0px #fafafa, 223px 0 0 0px #fafafa, 224px 0 0 0px #fafafa, 225px 0 0 0px #fafafa, 226px 0 0 0px #fafafa, 227px 0 0 0px #fafafa, 228px 0 0 0px #fafafa, 229px 0 0 0px #fafafa, 230px 0 0 0px #fafafa, 231px 0 0 0px #fafafa, 232px 0 0 0px #fafafa, 233px 0 0 0px #fafafa, 234px 0 0 0px #fafafa, 235px 0 0 0px #fafafa, 236px 0 0 0px #fafafa, 237px 0 0 0px #fafafa, 238px 0 0 0px #fafafa, 239px 0 0 0px #fafafa, 240px 0 0 0px #fafafa;
+  margin-top: -15px;
+  border: 1px solid #777;
+}
+
+.range .field input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 30px;
+  width: 30px;
+  background: #664aff;
+  border-radius: 50%;
+  border: 1px solid #664aff;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

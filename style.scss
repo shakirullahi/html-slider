@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+// @import "node_modules/core/_bourbon.scss";
+// $thumb-width: 28px;
+// $thumb-height: 18px;
+@function makelongshadow($color, $size) {
+  $val: 5px 0 0 $size $color;
+
+  @for $i from 6 through 240 {
+    $val: #{$val}, #{$i}px 0 0 $size #{$color};
+  }
+
+  @return $val;
+}
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  text-align: center;
+  place-items: center;
+  background-color: teal;
+}
+
+.range {
+  height: 80px;
+  width: 380px;
+  background: #fafafa;
+  border-radius: 20px;
+  padding: 0 65px 0 45px;
+}
+
+.range .sliderValue {
+  position: relative;
+  width: 100%;
+}
+
+.range .sliderValue span {
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  color: #fff;
+  top: -40px;
+  transform: translateX(-50%);
+  line-height: 55px;
+  z-index: 2;
+}
+
+.range .sliderValue span::after {
+  position: absolute;
+  content: "";
+  height: 45px;
+  width: 45px;
+  background: #664aff;
+  border: 3px solid #fff;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -1;
+}
+
+.range .field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.range .field .value {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 600;
+  color: #664aff;
+}
+.range .field .value.left {
+  left: -22px;
+}
+.range .field .value.right {
+  right: -43px;
+}
+.range .field input {
+  -webkit-appearance: none;
+  min-height: 50px;
+  width: 100%;
+  background: none;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  overflow: hidden;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    background: #e33d44;
+    content: "";
+    height: 2px;
+    pointer-events: none;
+  }
+
+  &::-webkit-slider-thumb {
+    // @include size($thumb-width $thumb-height);
+    width: 38px;
+    height: 18px;
+
+    appearance: none;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: makelongshadow(#fafafa, 0px);
+    margin-top: -15px;
+    border: 1px solid #777;
+  }
+}
+
+.range .field input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 30px;
+  width: 30px;
+  background: #664aff;
+  border-radius: 50%;
+  border: 1px solid #664aff;
+  cursor: pointer;
+}
