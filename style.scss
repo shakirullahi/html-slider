@@ -5,7 +5,7 @@
 @function makelongshadow($color, $size) {
   $val: 5px 0 0 $size $color;
 
-  @for $i from 6 through 240 {
+  @for $i from 6 through 260 {
     $val: #{$val}, #{$i}px 0 0 $size #{$color};
   }
 
@@ -25,7 +25,7 @@ body {
   height: 100%;
   text-align: center;
   place-items: center;
-  background-color: teal;
+  background-color: #fff;
 }
 
 .range {
@@ -44,28 +44,30 @@ body {
 .range .sliderValue span {
   position: absolute;
   height: 45px;
-  width: 45px;
-  color: #fff;
-  top: -40px;
+  width: 75px;
+  color: rgb(0, 0, 2);
+  top: -30px;
   transform: translateX(-50%);
   line-height: 55px;
   z-index: 2;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
-.range .sliderValue span::after {
-  position: absolute;
-  content: "";
-  height: 45px;
-  width: 45px;
-  background: #291d65;
-  border: 3px solid #fff;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  z-index: -1;
-}
+// .range .sliderValue span::after {
+//   position: absolute;
+//   content: "";
+//   height: 45px;
+//   width: 45px;
+//   background: #291d65;
+//   border: 3px solid #fff;
+//   border-top-left-radius: 50%;
+//   border-top-right-radius: 50%;
+//   border-bottom-left-radius: 50%;
+//   left: 50%;
+//   transform: translateX(-50%) rotate(45deg);
+//   z-index: -1;
+// }
 
 .range .field {
   position: relative;
@@ -106,7 +108,7 @@ body {
   }
 
   &::-webkit-slider-runnable-track {
-    background-color: #e33d44; /* For browsers that do not support gradients */
+    background-color: #281f58; /* For browsers that do not support gradients */
     background-image: linear-gradient(to right, #281f58, #52b7bf);
     content: "";
     height: 5px;
@@ -114,15 +116,14 @@ body {
   }
 
   &::-webkit-slider-thumb {
-    // @include size($thumb-width $thumb-height);
     width: 38px;
     height: 18px;
 
     appearance: none;
     background: #fff;
     border-radius: 8px;
-    box-shadow: makelongshadow(#fafafa, 0px);
-    margin-top: -15px;
+    box-shadow: makelongshadow(#d8d7dd, -12.4px);
+    margin-top: -12.4px;
     border: 1px solid #777;
   }
 
@@ -132,7 +133,6 @@ body {
   }
 
   &::-moz-range-thumb {
-    // @include size($thumb-width $thumb-height);
     width: 30px;
     height: 30px;
 

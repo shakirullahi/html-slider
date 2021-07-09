@@ -10,7 +10,7 @@
   <body>
     <div class="range">
       <div class="sliderValue">
-        <span>100</span>
+        <span>100 in</span>
       </div>
       <div class="field">
         <!-- <div class="value left">0</div> -->
@@ -31,7 +31,7 @@
     const sliderInput = document.querySelector("input");
     sliderInput.oninput = () => {
       let value = sliderInput.value;
-      sliderValue.textContent = value;
+      sliderValue.textContent = value + " in";
       sliderValue.style.left = value / 2 + "%";
     };
   </script>
